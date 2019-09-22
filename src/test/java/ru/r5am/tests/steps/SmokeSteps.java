@@ -10,6 +10,7 @@ import org.apache.logging.log4j.LogManager;
 import static com.codeborne.selenide.Selenide.open;
 
 import ru.r5am.configs.AppConfig;
+import ru.r5am.pageobjects.StartPage;
 
 
 public class SmokeSteps {
@@ -27,6 +28,8 @@ public class SmokeSteps {
     @Step("Отображается стартовая страница")
     @Тогда("Отображается стартовая страница")
     public void checkStartPageShow() {
+        StartPage startPage = new StartPage();
+        startPage.checkPageShow();
         log.info("Страница '{}' сайта успешно отображена", config.testUrl());
     }
 
