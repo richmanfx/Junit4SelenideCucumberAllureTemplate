@@ -1,7 +1,7 @@
 package ru.r5am.tests;
 
 
-import com.codeborne.selenide.Configuration;
+import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import io.cucumber.junit.Cucumber;
@@ -9,6 +9,8 @@ import org.apache.logging.log4j.Logger;
 import org.aeonbits.owner.ConfigFactory;
 import io.cucumber.junit.CucumberOptions;
 import org.apache.logging.log4j.LogManager;
+import com.codeborne.selenide.Configuration;
+import static com.codeborne.selenide.Selenide.close;
 
 import ru.r5am.configs.AppConfig;
 
@@ -61,6 +63,11 @@ public class CucumberRunnerTest {
             Configuration.browserCapabilities.setCapability("enableVNC", true);
         }
 
+    }
+
+    @AfterClass
+    public static void tearDown() {
+        close();
     }
 
 }
