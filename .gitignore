@@ -1,0 +1,12 @@
+.idea/
+*.iml
+
+logs/
+
+out/
+build/
+target/
+*.class
+
+.allure/
+allure-results/
