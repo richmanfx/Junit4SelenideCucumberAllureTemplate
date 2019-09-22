@@ -16,7 +16,7 @@ Configutation:
         charset: "UTF-8"
   Loggers:
     Root:
-      level: debug
+      level: info
       AppenderRef:
         - ref: "StdoutAppender"
 #        - ref: "FileAppender"
