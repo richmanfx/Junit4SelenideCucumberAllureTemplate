@@ -19,9 +19,9 @@
 
     <repositories>
         <repository>
-            <id>local_repository</id>
-            <name>Local Repository</name>
-            <url>file:${project.basedir}/repository</url>
+            <id>artifactory_repository</id>
+            <name>Artifactory Repository</name>
+            <url>http://localhost:8081/artifactory/mavenCentral"</url>
         </repository>
     </repositories>
 
@@ -75,13 +75,13 @@
         <dependency>
             <groupId>com.fasterxml.jackson.dataformat</groupId>
             <artifactId>jackson-dataformat-yaml</artifactId>
-            <version>2.9.9</version>
+            <version>2.9.10</version>
         </dependency>
 
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.9.9.3</version>
+            <version>2.9.10</version>
         </dependency>
 
 
